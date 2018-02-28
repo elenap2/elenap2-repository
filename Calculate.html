@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        var num1,num2,op,result;
+        function display(x)
+        {
+            
+            
+            alert(x.value);
+            userChoice(x.value);
+        }
+        function userChoice(y)
+        {
+            alert("num1="+ typeof num1);
+            switch(y)
+            {
+                case "1":
+               
+                case "2":
+               
+                case "3":
+                
+                case "4":
+               
+                case "5":
+              
+                case "6":
+                
+                case "7":
+              
+                case "8":
+              
+                case "9":
+               
+                case "0":
+               
+               {
+                  
+               
+                   
+                    if( typeof num1==='undefined')
+                   
+                        num1=Number(y)
+                    
+                else
+                {
+                    if(typeof (op)==='undefined')
+                    alert("Select operator before");
+
+                   
+                    else
+                    { num2=Number(y);alert("Num2="+num2);}
+                }
+               break;
+             }
+                case '/':
+                
+              
+              
+                case '*':
+              
+                
+               
+               
+                case '+':
+                
+              
+               
+                case '-':if(typeof num1==='undefined')
+                             alert("select first number before");
+
+                        
+                         else
+                             op=y;
+                
+               break;
+               
+               
+                case '=':
+               
+                if(typeof(num1)==='undefined' || typeof(num2)==='undefined' || typeof(op)==='undefined')
+                 alert("Please select 2 numbers and operator first");
+                 else
+                 calculate();
+                break;
+
+            }
+        }
+        function calculate()
+        {
+            switch(op)
+           {
+            case '/':
+                divide(num1,num2); ;
+                break;
+              
+                case '*':
+              
+                mult(num1,num2); ;
+                break;
+               
+                case '+':
+                add(num1,num2); ;
+                break;
+               
+                case '-':
+                sub(num1,num2); ;
+               break;
+           }
+        }
+
+  
+        function add(x,y)
+        {
+            result=x+y;
+displayText( result);
+        }
+        function mult(x,y)
+        {
+           result=x*y;
+            displayText( result);
+        }
+        function divide(x,y)
+        {
+           result=x/y;
+            displayText( result);
+        }
+        function sub(x,y)
+        {
+           result=x-y;
+            displayText(result );
+        }
+        function displayText()
+        {
+            document.getElementById("result").value=result;
+            clear();
+        }
+       function clear()
+       {
+        num1='undefined',num2='undefined',op='undefined',result='undefined';
+       } 
+    </script>
+    <title>Document</title>
+</head>
+<body>
+        <div class="btn-group" id="numbers">
+                <button type="button" id="1" value="1"class="btn btn-primary" onclick="display(this)">1</button>
+                <button type="button"  id="2" value="2" class="btn btn-primary" onclick="display(this)" >2</button>
+                <button type="button"  id="3" value="3" class="btn btn-primary" onclick="display(this)" >3</button>
+                <button type="button" value="4" id="4"   class="btn btn-primary" onclick="display(this)">4</button>
+                <button type="button" value="5"  id="5"   class="btn btn-primary" onclick="display(this)">5</button>
+         </div>
+              <button type="button" value="6"   id="6"   class="btn btn-primary" onclick="display(this)" >6</button>
+                <button type="button" value="7"  id="7"  class="btn btn-primary" onclick="display(this)" >7</button>
+                <button type="button" value="8" id="8"   class="btn btn-primary" onclick="display(this)" >8</button>
+                <button type="button"  value="9"  id="9"  class="btn btn-primary" onclick="display(this)" >9</button>
+                <button type="button" value="0"  id="0"   lass="btn btn-primary" onclick="display(this)"  >0</button>
+                <div class="btn-group" id="operator">
+                <button type="button" value="/"  id="/"   lass="btn btn-primary" onclick="display(this)" >/ </button>
+                <button type="button" value="*"   id="*"  class="btn btn-primary" onclick="display(this)" >* </button>
+                <button type="button"  value="+"  id="+"   class="btn btn-primary" onclick="display(this)">+ </button>
+                <button type="button"  value="-"   id="-"  class="btn btn-primary" onclick="display(this)">- </button>
+                <button type="button"  value="="  id="="   class="btn btn-primary" onclick="display(this)">= </button>
+                <button type="button"  value="="  id="clear"   class="btn btn-primary" onclick="clear()">Clear </button>
+                </div>
+              <div>
+                    <input type="text" id="result"><br>
+              </div> 
+</body>
+</html>

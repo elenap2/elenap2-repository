@@ -1,0 +1,68 @@
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Plotkin's Family Site</title>
+    <script src="F:\html projects\Scripts\allFunc.js"></script>
+</head>
+<body>
+<h1 style="text-align: center">Wellcome To Svetlana's  Page</h1>
+<div style="margin-right:  50px">
+    <table border="1" style="margin-left: 50px" >
+        <caption> Sveta's Details</caption>
+        <tr>
+            <th>
+                First Name
+            </th>
+            <th>
+                   Last Name
+             </th> 
+             <th>
+                 Phone number
+              </th>   
+              <th>
+                   Email
+             </th>  
+             <th>My video</th>        
+        </tr>
+        <tr>
+            <td ><input type="text" id="fname"  style="visibility: hidden" >
+                <span id="dataFname">Sveta</span> 
+               </td>
+               <td ><input type="text" id="lname" style="visibility: hidden" >
+                  <span id="dataLname">Plotkin</span> 
+               </td>
+               <td  ><input type="text" id="phone" style="visibility: hidden" >
+                  <span id="dataPhone">0546883928</span> 
+               </td>
+               <td ><input type="text" id="mail" style="visibility: hidden" >
+                <span id="dataMail">svtlnp@mail.ru</span>   
+               </td>
+            <td>
+                <video  height="200" width="300" controls >
+                    <source src="F:\html projects\multimedia\videoplayback.mp4" type="video/mp4">
+            </td>
+        </tr>
+    </table>
+</div>
+<div>
+        <img src="F:\html projects\images\SlideSveta\Slide1.JPG" alt="Workplace" usemap="#workmap" width="400px" height="350px" style="margin-left: 60px">
+
+        <map name="workmap">
+               
+          <area shape="rect" coords="0,0,200,350" alt="Yelena1"  href="Sveta1.html" >
+          <area shape="rect" coords="220,0,400,170" alt="Yelena2" href="Sveta2.html">
+          <area shape="rect" coords="220,200,400,350" alt="Yelena3" href="Sveta3.html">
+      
+         </map>
+       
+   
+        </div>    
+
+        <div style="margin-top: 30px;margin-left:550px">
+            <input type="button"  id="edit" onclick="editStatus(this)" value="edit" ></button>
+            <input type="button" id="save" onclick="editStatus(this)" value="save"></button>
+        </div>
+
+</body>
+</html>
